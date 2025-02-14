@@ -29,13 +29,3 @@ pip install --upgrade pip
 pip install requests beautifulsoup4
 
 echo "Dependencies installed."
-
-# Step 5: Run the Python Script
-echo "Running the script..."
-python3 your_script.py  # Replace with actual script name
-
-echo "Script execution completed."
-
-deactivate
-
-echo "Virtual environment deactivated."
