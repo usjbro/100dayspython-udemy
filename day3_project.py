@@ -38,7 +38,7 @@ if direction == "left":
         else:
             print("You Win!")
     else:
-        print("Game Over!")
+        print("You got attacked by a shark!")
 else:
     print("Fall into a hole. GAME OVER!")
 ## LEFT or RIGHT
