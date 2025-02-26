@@ -12,11 +12,11 @@ decrypted_text = ""
 
 def encrypt(text, shift, encrypted_text):
     for letter in text:
-        current_position = alphabet.index(letter)
-        if current_position + shift > 25:
-            new_position = current_position + shift - 25
-            print(f"new position: {new_position}")
+        if letter in alphabet:
+            current_position = alphabet.index(letter)
+            new_position = (current_position + shift) % len(alphabet)
             encrypted_text += alphabet[new_position]
+            print(f"new position: {new_position}")
         else:
             new_position = alphabet.index(letter) + shift
             print(f"new position: {new_position}")
@@ -28,14 +28,17 @@ def encrypt(text, shift, encrypted_text):
         
 
 
-def decrypt(text = text, shift = shift, decrypted_text = decrypted_text):
+def decrypt(text, shift, decrypted_text):
     for letter in text:
-        new_position = alphabet.index(letter) - shift
-        #new_position = position + shift
-        #print(f"old position: {position} new position: {new_position}")
-        print(f"new position: {new_position}")
-        encrypted_text += alphabet[new_position]
-        print(f"Your encrypted message is {encrypted_text}")
+        if letter in alphabet:
+            current_position = alphabet.index(letter)
+            new_position = (current_position - shift) % len(alphabet)
+            decrypted_text += alphabet[new_position]
+            print(f"new position: {new_position}")
+        else:
+            decrypted_text += letter
+
+        print(f"Your decrypted message is {encrypted_text}")
 
 if direction == "encrypt":
     encrypt(text, shift, encrypted_text)
