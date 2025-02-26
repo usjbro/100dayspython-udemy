@@ -6,11 +6,11 @@ direction = input("Pick encrypt or decrypt: ").lower()
 text = input("Enter your message: ").lower()
 shift = int(input("How many characters would you like the characters shifter? "))
 
-encrypted_text = ""
-decrypted_text = ""
+
 # letter_position = []
 
-def encrypt(text, shift, encrypted_text):
+def encrypt(text, shift):
+    encrypted_text = ""
     for letter in text:
         if letter in alphabet:
             current_position = alphabet.index(letter)
@@ -18,17 +18,15 @@ def encrypt(text, shift, encrypted_text):
             encrypted_text += alphabet[new_position]
             print(f"new position: {new_position}")
         else:
-            new_position = alphabet.index(letter) + shift
-            print(f"new position: {new_position}")
             encrypted_text += alphabet[new_position]
-
-        print(f"Your encrypted message is {encrypted_text}")
+        return encrypted_text
         #new_position = position + shift
         #print(f"old position: {position} new position: {new_position}")
         
 
 
-def decrypt(text, shift, decrypted_text):
+def decrypt(text, shift):
+    decrypted_text = ""
     for letter in text:
         if letter in alphabet:
             current_position = alphabet.index(letter)
@@ -37,12 +35,14 @@ def decrypt(text, shift, decrypted_text):
             print(f"new position: {new_position}")
         else:
             decrypted_text += letter
-
-        print(f"Your decrypted message is {encrypted_text}")
+    return decrypted_text
 
 if direction == "encrypt":
-    encrypt(text, shift, encrypted_text)
+    result = encrypt(text, shift)
+    print(f"Your encrypted message is {result}")
 elif direction == "decrypt":
-    decrypt(text, shift, decrypted_text)
+    result = decrypt(text, shift)
+    print(f"Your decrypted message is {result}")
+
 else:
     print("Unknow selection")
