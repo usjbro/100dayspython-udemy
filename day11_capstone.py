@@ -60,7 +60,7 @@ while not is_game_over:
 
     print(f"Your cards are: {player_cards}, current score: {player_score}")
     print(f"Dealers first card is {dealer_cards[0]}")
-    print(f"Dealers cards: {dealer_cards}") #Debug show dealers cards
+    # print(f"Dealers cards: {dealer_cards}") #Debug show dealers cards
 
 
     if player_score == 0 or dealer_score == 0 or player_score > 21:
