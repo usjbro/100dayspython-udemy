@@ -38,7 +38,7 @@ def determine_winner(player_score, dealer_score):
 def play_game():
     player_cards = [deal_card(), deal_card()]
     dealer_cards = [deal_card(), deal_card()]
-    
+
     is_game_over = False
 
     while not is_game_over:
