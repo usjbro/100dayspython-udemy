@@ -1,7 +1,7 @@
 import higherlowerart as hla
 import random
 from game_data import data
-from os import system
+#from os import system
 
 # # Name, Follower Count, Description, Country
 random.shuffle(data)

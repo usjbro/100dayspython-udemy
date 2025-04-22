@@ -1,1 +1,7 @@
 env/
+__pycache__/menu.cpython-313.pyc
+.gitignore
+__pycache__/.idea/misc.xml
+__pycache__/.idea/modules.xml
+__pycache__/.idea/vcs.xml
+__pycache__/.idea/__pycache__.iml
