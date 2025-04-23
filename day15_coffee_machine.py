@@ -7,33 +7,6 @@ menu_items = menu.MENU      # store menu dictionary from menu.py
 is_on = True                # sets machine state to on
 profit = 0                  # initial profit is $0
 
-# Prints Report of Resources
-# Prints Menu "What would you like? (espresso/latte/cappuccino):"
-# If there isnt enough of a resource
-## prints Sorry there isnt enough "resource". Start over
-# Prints Please insert coins
-# Prints "How many quarters? How many dimes? How many nickels? How many pennies?"
-# Calculates money inserted
-# Prints their change
-# Prints Here is your "Drink selected" emoji Enjoy!
-# Reduces Resources my amount used
-# Start over
-
-# Option A) Espresso 50ml Water 18g Coffee $1.50
-# option B) Lattee 200 ml Water 24g Coffee 150 ml Milk $2.50
-# Option C) Cappuccino 250 ml Water 24g Coffee 100 ml Milk $3.00
-
-# Resources:
-# Water: 300ml
-# Milk: 200 ml
-# Coffee: 100g
-
-# Money
-# Penny: .01
-# Nickel: .05
-# Dime: .1
-# Quarter: .25
-
 # function to get the users menu choice
 def selection(menu_items):
     print(f"Menu:\nEspresso ${menu_items['espresso']['cost']}\nLatte ${menu_items['latte']['cost']}\nCappuccino ${menu_items['espresso']['cost']}:")
